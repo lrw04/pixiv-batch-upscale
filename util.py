@@ -1,5 +1,6 @@
 import string
 
+
 def get_pid(fn: str):
     pid = ""
     ind = 0
@@ -10,7 +11,7 @@ def get_pid(fn: str):
             ind = i
             break
     ind += 2
-    p = ''
+    p = ""
     for c in fn[ind:]:
         if c in string.digits:
             p += c

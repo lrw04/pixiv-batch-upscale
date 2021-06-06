@@ -1,1 +1,1 @@
-WAIFU2X = '''waifu2x-ncnn-vulkan.exe'''
+WAIFU2X = """waifu2x-ncnn-vulkan.exe"""

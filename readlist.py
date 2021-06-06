@@ -9,4 +9,4 @@ for f in dir.iterdir():
         continue
     fn = f.parts[-1]
     pid = util.get_pid(fn)
-    print(f'{pid[0]},{pid[1]}')
+    print(f"{pid[0]},{pid[1]}")

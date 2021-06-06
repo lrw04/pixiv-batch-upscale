@@ -5,10 +5,12 @@ from config import WAIFU2X
 import util
 import shutil
 
+
 def doubleimg(img: Path):
-    tmpname = 'tmp' + img.suffix
-    run([WAIFU2X, '-s', '2', '-i', str(img), '-o', tmpname])
+    tmpname = "tmp" + img.suffix
+    run([WAIFU2X, "-s", "2", "-i", str(img), "-o", tmpname])
     shutil.copy(tmpname, img)
+
 
 img = Path(argv[1])
 lst = Path(argv[2])
@@ -28,9 +30,9 @@ for dir in img.iterdir():
 for k in sorted(images.keys()):
     print(k[0], k[1], images[k])
 
-with open(lst, 'r') as f:
+with open(lst, "r") as f:
     for l in f.readlines():
-        ind = tuple(l.strip().split(','))
+        ind = tuple(l.strip().split(","))
         p = Path(images[ind])
         if not (out / p.parts[-1]).exists():
             shutil.copy(p, out)
